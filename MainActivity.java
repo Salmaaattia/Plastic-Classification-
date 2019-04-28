@@ -1,5 +1,6 @@
 package com.plasticclassification.android;
 
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,12 +19,20 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
 
 //import com.google.firebase.database.DatabaseReference;
 //import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView txt;
+    Button btn;
     private static final String TAG = "MainActivity";
 
     //private FirebaseDatabase mFirebaseDatabase;
@@ -34,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
 
 
 
@@ -74,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+
         db.collection("Plastic Types")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -81,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
+                                        //=(String)(document.getId()+"=>"+document.getData());
                                 Log.d(TAG, document.getId() + " => " + document.getData());
                             }
                         } else {
@@ -93,8 +105,37 @@ public class MainActivity extends AppCompatActivity {
         //  mFirebaseDatabase =FirebaseDatabase.getInstance();
         //mMessagesDatabaseReference =mFirebaseDatabase.getReference().child("Plastic Cups");
 
-
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        txt=findViewById(R.id.textView);
+        btn=findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                db.collection("Plastic Types")
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        Log.d(TAG, document.getId() + " => " + document.getData());
+                                        txt.setText(document.getId()+"=>"+document.getData());
+                                    }
+                                } else {
+                                    Log.w(TAG, "Error getting documents.", task.getException());
+                                }
+                            }
+                        });
+
+
+
+            }
+        });
+
+        //super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 }
