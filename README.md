@@ -1,6 +1,7 @@
 # Plastic-Classification-
 Plastic classification for recycling, based on Computer Vision algorithms and Neural Networks.
 ## Project Goal
+The main goal of our application is to raise awareness of plastic hazards
 
 ## Project Architecture
 ### 1. Android Application
