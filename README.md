@@ -2,6 +2,13 @@
 Plastic classification for recycling, based on Computer Vision algorithms and Neural Networks.
 ## Project Goal
 The main goal of our application is to raise awareness of plastic hazards
+we want to encourage people to stop using plastics for good. If we don’t act now, by the year 2050 there will be more plastic in the ocean than fish.
+facts about the plastic hazards
+1. Plastics do not Biodegrade, and never fully Degrade
+2. Scientists estimate that 1 million seabirds and 100,000 marine mammals die each year from ingesting plastic. 
+3. When plastic does make it into the ocean it breaks down into smaller and smaller pieces known as “microplastics” rather than biodegrading or dissolving, which poses great threats to marine life including fish.
+![](https://get-green-now.com/wp-content/uploads/2018/01/Microplastic-compressor.jpg)
+
 
 ## Project Architecture
 ### 1. Android Application
