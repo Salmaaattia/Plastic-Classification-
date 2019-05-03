@@ -24,4 +24,4 @@ unfortunately after 3 days of labeling and training it didn't give good results
 
 So we used the same data and trained a custom visual recognition model on [ibm watson](https://www.ibm.com/watson) and the results and accuracy were high enough to rely on it 
 
-The input to the model is captured using the phone's camera then it's preprocessed before classification 
+The input to the model is captured using mobiles's camera then it's preprocessed before classification 
