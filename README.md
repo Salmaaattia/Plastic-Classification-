@@ -1,7 +1,7 @@
 # Plastic-Classification-
 Plastic classification for recycling, based on Computer Vision algorithms and Neural Networks.
-## Think before using 
-![please say no to plastic](https://j.gifs.com/oVyjEX.gif)
+## Remember before use 
+![Say no to plastic](dolphin.gif)
 ## Project Goal
 The main goal of our application is to raise awareness of plastic hazards
 we want to encourage people to stop using plastics for good. If we don’t act now, by the year 2050 there will be more plastic in the ocean than fish.
