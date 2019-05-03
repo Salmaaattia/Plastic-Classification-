@@ -17,6 +17,11 @@ Facts about the plastic hazards
 ### 1. Android Application
 ### 2. Firebase Database
 ### 4. Computer Vision Techniques
+we apply computer vision techniques before classifying 
+  1. Image Resizing
+  2. Image denoising
+  3. Image normalization 
+  4. increasing contrasts 
 ### 5. Classification
 first, we went to the object detection and classification approach with the aid of [Tony object detection demo](https://github.com/Tony607/object_detection_demo) , it required several steps
 #### 1. Specifying classes 
