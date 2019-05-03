@@ -19,9 +19,9 @@ done with [labelimg](https://github.com/tzutalin/labelImg)
 data preprocessing before training is a must 
 we filtered the images and resized all the data to (600,800) 
 #### 4. trainning
-training is done on colab [notebook]{https://drive.google.com/open?id=1A7WDR2371HpOgmr-j3OBiYwr5bX0YIu7}
+training is done on colab [notebook](https://drive.google.com/open?id=1A7WDR2371HpOgmr-j3OBiYwr5bX0YIu7)
 unfortunately after 3 days of labeling and training it didn't give good results
 
-so we used the same data and trained a custom visual recognition model on ibm watson and the results and accuracy were high enough to rely on it 
+so we used the same data and trained a custom visual recognition model on [ibm watson](https://www.ibm.com/watson) and the results and accuracy were high enough to rely on it 
 
 the input to the model is captured using the phone's camera then it's preprocessed before classification 
