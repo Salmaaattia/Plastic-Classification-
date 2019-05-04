@@ -13,11 +13,16 @@ press the video link to check the full demo and see multiple plastic product cla
 
 ### Demo GIF
 This is only a part from the full demo 
-
-![](assets/demo.gif?style=centerme)
+<p align="center">
+  <img src="assets/demo.gif">
+</p>
 
 ## Remember before use 
-![](assets/dolphin.gif?style=centerme)
+
+<p align="center">
+  <img src="assets/dolphin.gif">
+</p>
+
 ## Project Goal
 The main goal of our application is to raise awareness of plastic hazards
 we want to encourage people to stop using plastics for good. If we don’t act now, by the year 2050 there will be more plastic in the ocean than fish.
