@@ -56,11 +56,17 @@ The Data is organized in a collection named __Plastic Types__, which has multipl
     h. Health Concern : health issues due to use of this plastic.
  
 ### 4. Computer Vision Techniques
+
 we apply computer vision techniques before classifying 
-  1. Image Resizing
-  2. Image denoising
-  3. Increasing brightness 
-  4. Increasing contrasts 
+  1. __Image Resizing__ :
+  as some images captured by a camera and fed to our AI algorithm vary in size, therefore, we should establish a base size for all images fed into our AI algorithms.
+  2. __Image denoising__ :
+  denoising is established using Median Blur denoising technique.
+  3. __Increasing brightness__ :
+  increasing brightness of the image makes it more clear for classification.
+  4. __Increasing contrasts__ :
+  increasing contrast makes it more clear for classification.
+  
 ### 5. Classification
 first, we went to the object detection and classification approach with the aid of [Tony object detection demo](https://github.com/Tony607/object_detection_demo) , it required several steps
 #### 1. Specifying classes 
