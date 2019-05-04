@@ -16,6 +16,9 @@ Facts about the plastic hazards
 ## Project Architecture
 ### 1. Android Application
 ### 2. Firebase Database
+Firebase is an online platform  that we use to store our data.
+Our Data is retrieved on a realtime basis, making it easy to modify or update its content, also making the application lighter.
+The Data is organized in a collection named <b> plastic Types <b>  , which has multiple unique documents
 ### 4. Computer Vision Techniques
 we apply computer vision techniques before classifying 
   1. Image Resizing
