@@ -20,7 +20,7 @@ Firebase is an online platform  that we use to store our data.
 Our Data is retrieved on a realtime basis, making it easy to modify or update its content, also making the application lighter.
 The Data is organized in a collection named __Plastic Types__, which has multiple unique documents for each supported product.
 ![](assets/IPPSC1) 
-Each Product has multiple field:
+Each Product has multiple fields:
 
     a. Intro
     b. Type of plastic
