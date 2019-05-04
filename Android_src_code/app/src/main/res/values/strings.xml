@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">camerapp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="scan_this_product">Scan This Product</string>
+    <string name="todo">TODO</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="save_your_planet">Start From Here To Save Your Planet</string>
+
+</resources>
+

@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "1066200451803",
+    "firebase_url": "https://plastic-classification.firebaseio.com",
+    "project_id": "plastic-classification",
+    "storage_bucket": "plastic-classification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066200451803:android:57b430fd09a9be80",
+        "android_client_info": {
+          "package_name": "com.example.camerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066200451803-4ev7h435159q1ce2bt2icm2dae25onqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp1ZVUj6VLYgULYoV52JU3Z7MdWSYRiIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066200451803-4ev7h435159q1ce2bt2icm2dae25onqi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1066200451803-s76bdke1h9h8oiejgcs35hindr6q6v0n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.plasticclassification.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066200451803:android:13c3c6a65bcbec53",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066200451803-ha8t36b55rah5aep2i1ui220g6388ms3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "2955f9b60d9bdf79c8bfa9bf156e517c2f1797d5"
+          }
+        },
+        {
+          "client_id": "1066200451803-4ev7h435159q1ce2bt2icm2dae25onqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp1ZVUj6VLYgULYoV52JU3Z7MdWSYRiIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066200451803-4ev7h435159q1ce2bt2icm2dae25onqi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1066200451803-s76bdke1h9h8oiejgcs35hindr6q6v0n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.plasticclassification.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066200451803:android:ae47b8fa7e501cd2",
+        "android_client_info": {
+          "package_name": "com.plasticclassification.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066200451803-vqqjfo3i94snrc37od90dtrug4v1596n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.plasticclassification.android",
+            "certificate_hash": "2955f9b60d9bdf79c8bfa9bf156e517c2f1797d5"
+          }
+        },
+        {
+          "client_id": "1066200451803-4ev7h435159q1ce2bt2icm2dae25onqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp1ZVUj6VLYgULYoV52JU3Z7MdWSYRiIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066200451803-4ev7h435159q1ce2bt2icm2dae25onqi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1066200451803-s76bdke1h9h8oiejgcs35hindr6q6v0n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.plasticclassification.ios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
