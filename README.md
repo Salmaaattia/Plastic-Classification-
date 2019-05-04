@@ -22,16 +22,16 @@ The Data is organized in a collection named __Plastic Types__, which has multipl
 ![](assets/IPPSC1) 
 Each Product has multiple field:
 
-a. Intro
-a. Type of plastic
-b. Number
-c. Health Concern
-d. Recyclability
-e. Recycled Into
-f. Similar Products
-g. How To Use It Less
-f. Single-use
-g. If Used More Than Once
+    a. Intro
+    b. Type of plastic
+    c. Number
+    d. Recyclability
+    e. Recycled Into
+    f. Similar Products
+    g. How To Use It Less
+    f. Single-use
+    g. If Used More Than Once
+    h. Health Concern
  
 ### 4. Computer Vision Techniques
 we apply computer vision techniques before clcassifying 
