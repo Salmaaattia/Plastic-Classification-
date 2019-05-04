@@ -14,20 +14,25 @@ Facts about the plastic hazards
 
 
 ## Project Architecture
+
 ### 1. Android Application
 
-#### Dependencies:
+#### Generating APK
+
+
+#### Start Using ORCA
+
+To use ORCA application, click on "Start From Here and Save Your Planet" button then click on "Select Photo". 
+You can choose a photo for any plastic product from your gallery or take a photo using your mobile camera. 
+A ListView will show up multiple fields (Type of plastic, health concern,..), that you can click on and raise your awareness about our environment, the marine life, health issues and more and more helpful information. 
+
+#### Dependencies
 
 - java-sdk 6.2.0
 
 - firebase-database:16.0.4
 
 - firebase-firestore:18.2.0
-
-To use our application, click on "Start From Here and Save Your Planet" button then click on "Select Photo". 
-You can choose a photo from gallery or take a photo using you mobile camera 
-
-#### Generating APK:
 
 
 ### 2. Firebase Database
