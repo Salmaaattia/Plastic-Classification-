@@ -1,7 +1,7 @@
 # Plastic-Classification-
 Plastic classification for recycling, based on Computer Vision algorithms and Neural Networks.
 
-## Names
+## Team Names
 ### 1. Sama Elbaroudy
 ### 2. Perihane Youssef
 ### 3. Salma Ashraf 
