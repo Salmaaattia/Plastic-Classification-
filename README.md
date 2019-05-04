@@ -44,16 +44,16 @@ The Data is organized in a collection named __Plastic Types__, which has multipl
 
 ##### Each Product has multiple fields:
 
-    a. Intro : brief about the health and environmental issues.  
-    b. Type of plastic: One of the 7 types of plastic, PET, HDPE, PVC, LDPE, PP, PS, and other.
-    c. Number : this represents the resin number, recycling number.
-    d. Recyclability : this shows the recyclability of this type of plastic, as some of them are not highly recyclable or not recyclable in every country.
-    e. Recycled Into : this shows the products to which it is recycled into.
-    f. Similar Products : products manufactured from the same type of plastic.
-    g. How To Use It Less : health and environmental guidelines.
-    f. Single-use : if products should be used more than once or not.
-    g. If Used More Than Once : health problems if it is used more than once if it is  single-use.
-    h. Health Concern : health issues due to use of this plastic.
+a. Intro : brief about the health and environmental issues.  
+b. Type of plastic: One of the 7 types of plastic, PET, HDPE, PVC, LDPE, PP, PS, and other.
+c. Number : this represents the resin number, recycling number.
+d. Recyclability : this shows the recyclability of this type of plastic, as some of them are not highly recyclable or not recyclable in every country.
+e. Recycled Into : this shows the products to which it is recycled into.
+f. Similar Products : products manufactured from the same type of plastic.
+g. How To Use It Less : health and environmental guidelines.
+f. Single-use : if products should be used more than once or not.
+g. If Used More Than Once : health problems if it is used more than once if it is  single-use.
+h. Health Concern : health issues due to use of this plastic.
  
 ### 4. Computer Vision Techniques
 
