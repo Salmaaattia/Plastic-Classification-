@@ -19,8 +19,6 @@ public class MainActivity extends Activity {
 
         ivImage = (ImageView) findViewById(R.id.ivImage);
         button1 =(Button) findViewById(R.id.btnsaveyourplanet);
-
-
         button1.setOnClickListener(new View.OnClickListener()
         {
             @Override

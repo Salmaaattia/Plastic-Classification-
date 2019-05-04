@@ -1,27 +1,53 @@
 package com.example.camerapp;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.example.camerapp.R;
+import com.ibm.watson.developer_cloud.service.exception.NotFoundException;
+import com.ibm.watson.developer_cloud.service.security.IamOptions;
+import com.ibm.watson.developer_cloud.visual_recognition.v3.VisualRecognition;
+import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassResult;
+import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifiedImages;
+import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifyOptions;
+
+import io.reactivex.Single;
+import io.reactivex.SingleEmitter;
+import io.reactivex.SingleObserver;
+import io.reactivex.SingleOnSubscribe;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 public class Activity2 extends AppCompatActivity {
 
@@ -30,6 +56,14 @@ public class Activity2 extends AppCompatActivity {
     private ImageView ivImage;
     private String userChoosenTask;
     private Button button3;
+
+    private final String API_KEY = "oJZgBYPeVQIgc21HABkbwlkA0kGBElCuUnS52wRD0KHU";
+    Button btnFetchResults;
+    ProgressBar progressBar;
+    View content;
+    Single<ClassifiedImages> observable;
+    private float threshold = (float) 0.6;
+    Bitmap image = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,17 +79,36 @@ public class Activity2 extends AppCompatActivity {
             }
         });
         ivImage = (ImageView) findViewById(R.id.ivImage);
-        button3 =(Button) findViewById(R.id.btnscantheproduct);
+        content = findViewById(R.id.ll_content);
+        progressBar = findViewById(R.id.progress_bar);
+        progressBar.setVisibility(View.GONE);
 
-
-        button3.setOnClickListener(new View.OnClickListener()
-        {
+        observable = Single.create(new SingleOnSubscribe<ClassifiedImages>() {
             @Override
-            public void onClick(View v)
-            {
-                scanthisproduct();
+            public void subscribe(SingleEmitter<ClassifiedImages> emitter) throws Exception {
+                final IamOptions options = new IamOptions.Builder()
+                        .apiKey(API_KEY)
+                        .build();
+
+                VisualRecognition visualRecognition = new VisualRecognition("2018-03-19", options);
+                //visualRecognition.setEndPoint("https://gateway.watsonplatform.net/conversation/api");
+
+                ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                image.compress(Bitmap.CompressFormat.PNG, 0, bos);
+                byte[] bitmapdata = bos.toByteArray();
+                ByteArrayInputStream bs = new ByteArrayInputStream(bitmapdata);
+                final ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
+                        .imagesFile(bs)
+                        .imagesFilename("fruitbowl.jpg")
+                        .threshold(threshold)
+                        .owners(Collections.singletonList("me"))
+                        .build();
+                ClassifiedImages classifiedImages = visualRecognition.classify(classifyOptions).execute();
+                emitter.onSuccess(classifiedImages);
             }
-        });
+        }).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+
     }
 
     @Override
@@ -124,8 +177,9 @@ public class Activity2 extends AppCompatActivity {
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == SELECT_FILE)
                 onSelectFromGalleryResult(data);
-            else if (requestCode == REQUEST_CAMERA)
+            else if (requestCode == REQUEST_CAMERA) {
                 onCaptureImageResult(data);
+            }
         }
     }
 
@@ -150,6 +204,9 @@ public class Activity2 extends AppCompatActivity {
         }
 
         ivImage.setImageBitmap(thumbnail);
+        upload_ibm(thumbnail);
+
+
     }
 
     @SuppressWarnings("deprecation")
@@ -165,11 +222,43 @@ public class Activity2 extends AppCompatActivity {
         }
 
         ivImage.setImageBitmap(bm);
+        upload_ibm(bm);
     }
-    public void scanthisproduct()
+
+
+    private void goToNext(String url, List<ClassResult> resultList) {
+        progressBar.setVisibility(View.GONE);
+        Intent i = new Intent(this,  Activity3.class);
+        i.putExtra("url", url);
+        i.putExtra("class", resultList.get(0).getClassName());
+        startActivity(i);
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    private  void upload_ibm(final Bitmap image)
     {
-        Intent intent= new Intent(this, Activity3.class);
-        startActivity(intent);
+        this.image = image;
+        observable.subscribe(new SingleObserver<ClassifiedImages>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+                progressBar.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onSuccess(ClassifiedImages classifiedImages) {
+                System.out.println(classifiedImages.toString());
+                List<ClassResult> resultList = classifiedImages.getImages().get(0).getClassifiers().get(0).getClasses();
+                String url = classifiedImages.getImages().get(0).getSourceUrl();
+                goToNext(url, resultList);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                System.out.println(e.getMessage());
+                Log.d("test", e.getMessage());
+            }
+        });
+
     }
 
 }
