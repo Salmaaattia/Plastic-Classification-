@@ -15,6 +15,21 @@ Facts about the plastic hazards
 
 ## Project Architecture
 ### 1. Android Application
+
+#### Dependencies:
+
+- java-sdk 6.2.0
+
+- firebase-database:16.0.4
+
+- firebase-firestore:18.2.0
+
+To use our application, click on "Start From Here and Save Your Planet" button then click on "Select Photo". 
+You can choose a photo from gallery or take a photo using you mobile camera 
+
+#### Generating APK:
+
+
 ### 2. Firebase Database
 Firebase is an online platform  that we use to store our data.
 Our Data is retrieved on a realtime basis, making it easy to modify or update its content, also making the application lighter.
@@ -34,7 +49,7 @@ Each Product has multiple fields:
     h. Health Concern
  
 ### 4. Computer Vision Techniques
-we apply computer vision techniques before clcassifying 
+we apply computer vision techniques before classifying 
   1. Image Resizing
   2. Image denoising
   3. Increasing brightness 
@@ -51,7 +66,7 @@ Done with [labelimg](https://github.com/tzutalin/labelImg)
 #### 5. Data preprocessing 
 Data preprocessing before training is a must 
 we filtered the images and resized all the data to (600,800) 
-#### 4. Trainning
+#### 4. Training
 Training is done on colab [notebook](https://drive.google.com/open?id=1A7WDR2371HpOgmr-j3OBiYwr5bX0YIu7)
 unfortunately after 3 days of labeling and training it didn't give good results
 
