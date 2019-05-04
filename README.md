@@ -16,7 +16,6 @@ Facts about the plastic hazards
 ## Project Architecture
 ### 1. Android Application
 ### 2. Firebase Database
-![](/assets/Screenshot_2019-05-03 Plastic Classification – Firebase console.png)
 ### 4. Computer Vision Techniques
 we apply computer vision techniques before classifying 
   1. Image Resizing
