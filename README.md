@@ -1,7 +1,7 @@
 # Plastic-Classification-
 Plastic classification for recycling, based on Computer Vision algorithms and Neural Networks.
 ## Remember before use 
-![Say no to plastic](dolphin.gif)
+![Say no to plastic](assets/dolphin.gif)
 ## Project Goal
 The main goal of our application is to raise awareness of plastic hazards
 we want to encourage people to stop using plastics for good. If we don’t act now, by the year 2050 there will be more plastic in the ocean than fish.
@@ -18,9 +18,23 @@ Facts about the plastic hazards
 ### 2. Firebase Database
 Firebase is an online platform  that we use to store our data.
 Our Data is retrieved on a realtime basis, making it easy to modify or update its content, also making the application lighter.
-The Data is organized in a collection named <b> plastic Types <b>  , which has multiple unique documents
+The Data is organized in a collection named __Plastic Types__, which has multiple unique documents for each supported product.
+![](assets/IPPSC1) 
+Each Product has multiple field:
+
+a. Intro
+a. Type of plastic
+b. Number
+c. Health Concern
+d. Recyclability
+e. Recycled Into
+f. Similar Products
+g. How To Use It Less
+f. Single-use
+g. If Used More Than Once
+ 
 ### 4. Computer Vision Techniques
-we apply computer vision techniques before classifying 
+we apply computer vision techniques before clcassifying 
   1. Image Resizing
   2. Image denoising
   3. Increasing brightness 
