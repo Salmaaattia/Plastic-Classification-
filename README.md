@@ -31,7 +31,17 @@ Facts about the plastic hazards
 1. Plastics do not Biodegrade, and never fully Degrade
 2. Scientists estimate that 1 million seabirds and 100,000 marine mammals die each year from ingesting plastic. 
 3. When plastic does make it into the ocean it breaks down into smaller and smaller pieces known as “microplastics” rather than biodegrading or dissolving, which poses great threats to marine life including fish.
-![](https://get-green-now.com/wp-content/uploads/2018/01/Microplastic-compressor.jpg)
+
+<p align="center">
+  <img src="https://get-green-now.com/wp-content/uploads/2018/01/Microplastic-compressor.jpg">
+</p>
+
+
+4. About 8.3 billion tonnes of plastic has been produced since the 1950s – the weight of roughly a billion elephants or 47 million blue whales.
+5. Only about 9% of this plastic has been recycled, 12% has been burned and the remaining 79% has ended up in landfills or the environment.
+6. Up to 12.7 million tonnes of plastic enters the oceans every year.
+7. The equivalent of a truckload of plastic enters the oceans every minute.
+8. Up to 9 of 10 seabirds, 1 in 3 sea turtles and more than half of whale and dolphin species have ingested plastic.
 
 
 ## Project Architecture
