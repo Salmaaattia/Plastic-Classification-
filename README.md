@@ -1,5 +1,6 @@
 # Plastic-Classification-Android Mobile Application
-Plastic classification for recycling, based on Computer Vision algorithms and Neural Networks.
+
+A convenient resource at your fingertips to save your planet, seas and oceans and raise awareness of plastic hazards through plastic classification for recycling, based on Computer Vision algorithms and Neural Networks.
 
 ## Team Members Names
 ### 1. Sama Elbaroudy
