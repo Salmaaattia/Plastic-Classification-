@@ -7,9 +7,9 @@ Plastic classification for recycling, based on Computer Vision algorithms and Ne
 ### 3. Salma Ashraf 
 
 ## Demo 
-### ![Project Demo Video Link](https://drive.google.com/open?id=1LOtMQKHlAmZqM6DJC46BG5qehVZr3W4X)
+### [Project Demo Video Link](https://drive.google.com/open?id=1LOtMQKHlAmZqM6DJC46BG5qehVZr3W4X)
 
-press the video link to check the full demo and see multiple plastic product classification
+Press the video link to check the full demo and see multiple plastic product classification
 
 ### Demo GIF
 This is only a part from the full demo 
