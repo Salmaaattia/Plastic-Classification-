@@ -87,9 +87,10 @@ The Data is organized in a collection named __Plastic Types__, which has multipl
     g. If Used More Than Once : health problems if it is used more than once if it is  single-use.
     h. Health Concern : health issues due to use of this plastic.
  
-### 4. Computer Vision Techniques
+### 4. Image Processing Techniques
 
-We apply computer vision techniques before classifying 
+We apply image processing techniques before classifying as a perprocessing for the input image.
+
   1. __Image Resizing__ :
   
   As some images captured by a camera and fed to our AI algorithm vary in size, therefore, we should establish a base size for all images fed into our AI algorithms.
@@ -99,24 +100,27 @@ We apply computer vision techniques before classifying
   Where the underlying goal is to estimate the original image by suppressing noise from a noise-contaminated version of the image. Image noise may be caused by different intrinsic (i.e., sensor) and extrinsic (i.e., environment) conditions which are often not possible to avoid in practical situations. Therefore, image denoising plays an important role in image classification applications, where obtaining the original image content is crucial for strong performance. 
   Denoising is established using Median Blur denoising technique.
   
-  3. __Increasing brightness__ :
-  increasing brightness of the image makes it more clear for classification.
-  4. __Increasing contrasts__ :
-  increasing contrast makes it more clear for classification.
+  3. __Increasing Brightness__ :
+  
+  Increasing brightness of the image makes it more clear for classification.
+  
+  4. __Increasing Contrasts__ :
+  
+  Making more obvious the objects or details within an image, increasing contrast makes it more clear for classification.
   
 ### 5. Classification
 first, we went to the object detection and classification approach with the aid of [Tony object detection demo](https://github.com/Tony607/object_detection_demo) , it required several steps
 #### 1. Specifying classes 
-Based on research we found that the most used and environment endagering plastics are water bottles, plastic bags, plastic,  silverware (fork , knife and spoons ), shampoo and detergent bottles, plastic cups, coffee lids, straws, plastic plates and bottle  caps
+Based on research we found that the most used and environment endagering plastics are water bottles, plastic bags, plastic,  silverware (fork , knife and spoons ), shampoo and detergent bottles, plastic cups, coffee lids, straws, plastic plates and bottle caps
 #### 2. Data collection
 Most of the data are collected from shutterstock and google image.
 after collecting we filtered the data to make sure that it's convenient to the classes.
 #### 3. Image labelling 
 Done with [labelimg](https://github.com/tzutalin/labelImg)
-#### 5. Data preprocessing 
+#### 4. Data preprocessing 
 Data preprocessing before training is a must 
 we filtered the images and resized all the data to (600,800) 
-#### 4. Training
+#### 5. Training
 Training is done on colab [notebook](https://drive.google.com/open?id=1A7WDR2371HpOgmr-j3OBiYwr5bX0YIu7)
 unfortunately after 3 days of labeling and training it didn't give good results
 
