@@ -89,11 +89,16 @@ The Data is organized in a collection named __Plastic Types__, which has multipl
  
 ### 4. Computer Vision Techniques
 
-we apply computer vision techniques before classifying 
+We apply computer vision techniques before classifying 
   1. __Image Resizing__ :
-  as some images captured by a camera and fed to our AI algorithm vary in size, therefore, we should establish a base size for all images fed into our AI algorithms.
-  2. __Image denoising__ :
-  denoising is established using Median Blur denoising technique.
+  
+  As some images captured by a camera and fed to our AI algorithm vary in size, therefore, we should establish a base size for all images fed into our AI algorithms.
+  
+  2. __Image Denoising__ :
+  
+  Where the underlying goal is to estimate the original image by suppressing noise from a noise-contaminated version of the image. Image noise may be caused by different intrinsic (i.e., sensor) and extrinsic (i.e., environment) conditions which are often not possible to avoid in practical situations. Therefore, image denoising plays an important role in image classification applications, where obtaining the original image content is crucial for strong performance. 
+  Denoising is established using Median Blur denoising technique.
+  
   3. __Increasing brightness__ :
   increasing brightness of the image makes it more clear for classification.
   4. __Increasing contrasts__ :
