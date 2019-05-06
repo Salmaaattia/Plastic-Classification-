@@ -1,4 +1,4 @@
-# Plastic-Classification-
+# Plastic-Classification-Android Mobile Application
 Plastic classification for recycling, based on Computer Vision algorithms and Neural Networks.
 
 ## Team Members Names
